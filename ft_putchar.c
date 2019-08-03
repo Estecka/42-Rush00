@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 09:46:56 by abaur             #+#    #+#             */
-/*   Updated: 2019/08/03 11:20:36 by abaur            ###   ########.fr       */
+/*   Updated: 2019/08/03 11:44:01 by abaur            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putchar(char c)
 
 void	ft_draw_first_line_at(int x, int width, char *skin)
 {
-	if(x == 0)
+	if (x == 0)
 		ft_putchar(skin[NW]);
 	else if (x == (width - 1))
 		ft_putchar(skin[NE]);
@@ -36,7 +36,7 @@ void	ft_draw_first_line_at(int x, int width, char *skin)
 
 void	ft_draw_mid_line_at(int x, int width, char *skin)
 {
-	if(x == 0 || x == (width - 1))
+	if (x == 0 || x == (width - 1))
 		ft_putchar(skin[BORDER]);
 	else
 		ft_putchar(BODY);
@@ -44,7 +44,7 @@ void	ft_draw_mid_line_at(int x, int width, char *skin)
 
 void	ft_draw_last_line_at(int x, int width, char *skin)
 {
-	if(x == 0)
+	if (x == 0)
 		ft_putchar(skin[SW]);
 	else if (x == (width - 1))
 		ft_putchar(skin[SE]);
