@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rush00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jokaruk- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/03 09:42:13 by abaur             #+#    #+#             */
-/*   Updated: 2019/08/03 12:05:16 by jokaruk-         ###   ########.fr       */
+/*   Created: 2019/08/03 11:45:01 by jokaruk-          #+#    #+#             */
+/*   Updated: 2019/08/03 12:02:20 by jokaruk-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	rush(int width, int height);
+void	ft_draw_cube(int width, int height, char *skin);
 
-int		main(void)
+void	rush(int width, int height)
 {
-	rush(-5, 1);
-	return (0);
+	char skin[6];
+
+	skin[0] = 'o';
+	skin[1] = 'o';
+	skin[2] = 'o';
+	skin[3] = 'o';
+	skin[4] = '-';
+	skin[5] = '|';
+	ft_draw_cube(width, height, skin);
 }

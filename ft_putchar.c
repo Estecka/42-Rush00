@@ -6,7 +6,7 @@
 /*   By: abaur <abaur@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/03 09:46:56 by abaur             #+#    #+#             */
-/*   Updated: 2019/08/03 11:44:01 by abaur            ###   ########.fr       */
+/*   Updated: 2019/08/03 12:06:24 by jokaruk-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 #define NE 1
 #define SW 2
 #define SE 3
-#define BORDER 4
+#define BORDER_H 4
+#define BORDER_V 5
 #define BODY ' '
 
 void	ft_putchar(char c)
@@ -31,13 +32,13 @@ void	ft_draw_first_line_at(int x, int width, char *skin)
 	else if (x == (width - 1))
 		ft_putchar(skin[NE]);
 	else
-		ft_putchar(skin[BORDER]);
+		ft_putchar(skin[BORDER_H]);
 }
 
 void	ft_draw_mid_line_at(int x, int width, char *skin)
 {
 	if (x == 0 || x == (width - 1))
-		ft_putchar(skin[BORDER]);
+		ft_putchar(skin[BORDER_V]);
 	else
 		ft_putchar(BODY);
 }
@@ -49,7 +50,7 @@ void	ft_draw_last_line_at(int x, int width, char *skin)
 	else if (x == (width - 1))
 		ft_putchar(skin[SE]);
 	else
-		ft_putchar(skin[BORDER]);
+		ft_putchar(skin[BORDER_H]);
 }
 
 void	ft_draw_cube(int width, int height, char *skin)
@@ -68,7 +69,7 @@ void	ft_draw_cube(int width, int height, char *skin)
 			else if (y == (height - 1))
 				ft_draw_last_line_at(x, width, skin);
 			else
-				ft_draw_mid_line_at(x, width, skin);\
+				ft_draw_mid_line_at(x, width, skin);
 			x++;
 		}
 		ft_putchar('\n');
